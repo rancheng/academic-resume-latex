@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in Latex
+% Author : Ran Cheng
+% Adapted from: Indu dwivedi, Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex, hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[charter]{mathdesign} % Bitstream Charter
+% \usepackage{newpxtext,newpxmath} % Palatino
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{bibentry}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% bibtex for publication
+\bibliographystyle{plain}
+\nobibliography{resume.bib}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.50in}
+\addtolength{\evensidemargin}{-0.50in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Define colors
+\definecolor{linkblue}{RGB}{111, 153, 222}
+\definecolor{titleblue}{RGB}{46, 116, 181}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright\definecolor{linkblue}{RGB}{111, 153, 222}
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNoBullet}[2]{
+  \item[]\small{
+    \hspace{-9pt}\textbf{#1}{: #2 \vspace{-6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \hspace{-10pt}\textbf{#1} & #2 \\
+      \hspace{-10pt}\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% custom commands
+\newcommand{\shorterSection}[1]{\vspace{-10pt}\section{#1}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+% icon down load address: https://freeicons.io
+% you can generate your own qr code here: https://www.the-qrcode-generator.com/
+% and convert the svg image you exported to pdf here: https://cloudconvert.com/svg-to-pdf
+% then import the graph in the title like this:
+
+\begin{table}[]
+\begin{tabular*}{\textwidth}{lc@{\extracolsep{\fill}}r}
+\begin{tabular}{l}
+\textbf{\huge \textcolor{titleblue}{Ran Cheng}} \\
+\\
+An Intelligent Robotics Researcher   
+\end{tabular}  &  & \begin{tabular}{@{}rr@{}} \textcolor{titleblue}{\includegraphics[width=0.017\linewidth]{imgs/location(1).pdf}} MLL 411, McGill University, Montreal, Canada & \multirow{3}{*}{\includegraphics[width=0.096\linewidth]{imgs/githubpage.pdf}} \\
+\includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} ran.cheng2@mail.mcgill.ca                     &                   \\
+\includegraphics[width=0.017\linewidth]{imgs/home(1).pdf} \href{http://rancheng.github.io}{rancheng.github.io}                            &                   \\
+\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} 774-823-4304                                  &                   
+\end{tabular}  \\ 
+\end{tabular*}
+\end{table}
+
+\vspace*{-10mm}
+
+
+%-----------EDUCATION-----------------
+\shorterSection{\textcolor{titleblue}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McGill University, Computer Science}{Montreal, Canada}     {Master of Science in Computer Science}{Expected May 2020}{
+      \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
+      \resumeItemNoBullet{Relevant Coursework}{Intelligent Robotics, Reinforcement Learning, Applied Machine Learning}
+    }
+    \resumeSubheading
+      {Coursera}{Online}     {Honored Degrees \& Long-term Community Contributor}{Aug 2015 - Aug 2017}{
+      \resumeItemNoBullet{Completed Courses}{Neural Network for Machine Learning (UToronto), Robotics: Specialization (UPenn), Machine Learning (Stanford)}
+    }
+    \resumeSubheading
+      {Tongji University, School of Software Engineering}{Shanghai, China}     {Bachelor of Engineer, Software Engineering;  GPA: 3.89/4.0}{Aug 2011 - Aug 2015}{
+      \resumeItemNoBullet{Honors and Awards}{Outstanding Diploma thesis, National Aspiration Fellowship, Second Class Prize Fellowship, Social Activism Award, IBM
+Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge, a Robot Competition Conference) Technician}
+    }
+  \resumeSubHeadingListEnd
+
+% %-----------ACADEMIC PROJECTS AND INTERNSHIPS-----------------
+% \shorterSection{Academic Projects and internships}
+%   \resumeSubHeadingListStart
+%   \small
+%     \item{
+%      \textbf{Languages}{: Python, C++, SQL, Java, Swift}
+%      \hfill
+%      \textbf{Technologies}{: GCP, AWS, GitHub, GitLab, Docker}
+%     }
+%     \vspace{-5pt}
+%     \item{
+%      \textbf{Libraries}{: TensorFlow, PyTorch, Keras, Scikit-Learn, Numpy, Pandas, Spark, Jupyter, OpenCV, PIL, OpenCL, OpenGL, CUDA}
+%     }
+% \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\shorterSection{\textcolor{titleblue}{Experience}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mobile Robotics Lab, McGill University}{Montreal, Canada}
+      {Research Assistant, Supervisor: \textbf{Gregory Dudek}}{Sep 2017 - Now}
+      \resumeItemListStart
+        \resumeItem{Deep Monocular VO}
+          { Designed a semi-supervised monocular depth estimator for video using sparse bundle adjustment in a sliding window, achieved 0.117 (top5) RMSE in \textbf{NYU v2} and 2.981 (top10) RMSE in \textbf{Kitti eigen-split}. backbone is Unet+CSPN, trained with semi-dense map point tracked by VO, implemented with PyTorch. }
+        \resumeItem{NavGuideNet}
+          {A \textbf{synthesized hierarchical neural network} for autonomous navigation in complex environment and variant landscapes (tested in field/underwater environments). Backbone encoder is \textbf{Resnet18}, \textbf{latent code} was concaternated with control signals and decoder is \textbf{de-convolution network} (transposed convolution), average lost rate in underwater experiments decreased 91.5\%, average aligned trajectory RMSE is 6.39 with improvement of 51.8\%
+           (\href{ssh://git@gitlab.mcgillmobilerobotics.mooo.com:2289/travis/AutoDriving.git}{\textcolor{linkblue}{gitlab}})}
+        \resumeItem{Deep RL Auto Driving (Sim2Real)}
+          {Re-implemented CAD2RL in python and extended to multiple policy gradient based backends \textbf{(A3C+LSTM, DDPG, TRPO, PPO, TD3)} in continuous action space, simulator is is \textbf{Microsoft AirSim} tested on RC car and UAV.
+          }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {iLab Tongji/University of South California}{Shanghai, China, Los Angeles, USA}
+      {Research Assistant, Supervisor: Jianwei Lu, Laurent Itti}{Apr 2015 - Jul 2017}
+      \resumeItemListStart
+        \resumeItem{SLAM Fusion}
+          {Vision (monocular) LiDar fusion with direct method (jointly optimize optical flow with Sparse Bundle Adjustment on ORB features) extra constraint from LiDar helps eliminating depth from null space. }
+        \resumeItem{Visual SLAM with Saliency}
+          { joint optimizing the graph (G2O) with salient voting as extra binary edges.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {UCLA}{Los Angeles, USA}
+      {Part-time Research Assistant, Supervisor: Yi Xing}{Jul 2015 - Jan 2016}
+      \resumeItemListStart
+        \resumeItem{Code Parallelization}
+          {optimized their RNA analysis tool, [stable release (rMATS 3.0.9)], binding the large matrix calculations with C11 (SSE/AVX vectorization, Intel) and CUDA (cuBLAS , Nvidia) }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS/SKILLS-----------------
+\shorterSection{\textcolor{titleblue}{Projects}}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Visual SLAM}
+     {Refactored \textbf{Stereo-DSO} ( \href{http://gitlab.mcgillmobilerobotics.mooo.com:8089/cheng/stereo_DSO_ros}{\textcolor{linkblue}{gitlab}}) with keyframe and feature point based \textbf{loop closure, BA} (\textbf{Ceres} solver). Using Tracking-Mapping-ReTracking three thread architecture, run on Nvidia-TX2 with ~15 FPS. Comprehensively \textbf{re-implemented} \href{https://github.com/rancheng/dso_understands}{\textcolor{linkblue}{DSO}} and annotated with exhaustive explains.
+     }
+    \resumeSubItem{Deep Monocular Dense 3D Reconstruction}{Dense 3D reconstruction with \textbf{monodepth2} initialized Visual Odometry, leveraging traditional photometric consistancy, occlusion discrepancy, and local geometrical-smooth assumptions to \textbf{optimize depth estimation} (\textbf{LM} method) and \textbf{register} 3D map point clouds.}
+    \resumeSubItem{Abstraction Augmented Deep RL}
+      {Abstract rgb image with Unet shaped network to digest image in latent representation, and learn from latent inputs, average convergence time increased 27.3\%, maximum reward (10M iterations) is 1.21 times than baseline model without abstraction augmentation, experiments conducted under self-collected dataset from AirSim simulator (\href{https://github.com/rancheng/AirSimProjects}{\textcolor{linkblue}{github}})}
+    \resumeSubItem{Forgetting Model for BP}
+      {Introduced forgetting model for back propagation as in gradient dynamic routine, inspired from forgetting curve, I invented forgetting factor to regulate delta weights updates, (\href{https://rancheng.github.io/forgetting-model/}{\textcolor{linkblue}{math proof}})}
+    \resumeSubItem{LOAM}{extended LOAM with co-visibility check, optimized with Ceres optimizer and asynchronous threading}
+  \resumeSubHeadingListEnd
+
+%-----------Addtional Experience & Achievements-----------------
+\shorterSection{\textcolor{titleblue}{Publications}}
+  \resumeSubHeadingListStart
+  \small
+     
+        \item{Robust Off-road Robotics Visual Navigation with Back-Projection Learning, \textbf{R. Cheng}, T. Manderson, D. Meger, G. Dudek \textbf{ICRA 2020}}
+        \vspace{-5pt}
+        \item{Abstraction Augmentation for Deep Reinforcement Learning, \textbf{R. Cheng}, G. Dudek, D. Meger \textbf{CORL 2020}}
+        \vspace{-5pt}
+        \item{Predicting Visual Pose Estimation Failure on a Vehicle for Off-Road Driving, T. Manderson, \textbf{R. Cheng}, G. Dudek \textbf{ICRA 2019}}
+        \vspace{-5pt}
+        \item{Navigation in the Service of Enhanced Pose Estimation, Travis Manderson, \textbf{Ran Cheng}, David Meger and Gregory Dudek, \textbf{ISER 2018}}
+        \vspace{-5pt}
+        \item{Vision-Based Autonomous Underwater Swimming in Dense Coral for Combined Collision Avoidance and Target Selection, T. Manderson, \textbf{R. Cheng}, D. Meger, G. Dudek, \textbf{IROS 2018}}
+  \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
