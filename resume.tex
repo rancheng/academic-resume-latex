@@ -122,7 +122,7 @@ An Intelligent Robotics Researcher
   \resumeSubHeadingListStart
     \resumeSubheading
       {McGill University, Computer Science}{Montreal, Canada}     {Master of Science in Computer Science}{Expected May 2020}{
-      \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
+    %   \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
       \resumeItemNoBullet{Relevant Coursework}{Intelligent Robotics, Reinforcement Learning, Applied Machine Learning}
     }
     \resumeSubheading
@@ -160,12 +160,11 @@ Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge
       {Research Assistant, Supervisor: \textbf{Gregory Dudek}}{Sep 2017 - Now}
       \resumeItemListStart
         \resumeItem{Deep Monocular VO}
-          { Designed a semi-supervised monocular depth estimator for video using sparse bundle adjustment in a sliding window, achieved 0.117 (top5) RMSE in \textbf{NYU v2} and 2.981 (top10) RMSE in \textbf{Kitti eigen-split}. backbone is Unet+CSPN, trained with semi-dense map point tracked by VO, implemented with PyTorch. }
+          { Designed a semi-supervised monocular depth estimator for video using sparse bundle adjustment in a sliding window, achieved 0.117 (top5) RMSE in \textbf{NYU v2} and 2.981 (top10) RMSE in \textbf{Kitti eigen-split}. backbone is Unet+CSPN, trained with semi-dense map point tracked by VO, implemented with \textbf{PyTorch}. }
         \resumeItem{NavGuideNet}
-          {A \textbf{synthesized hierarchical neural network} for autonomous navigation in complex environment and variant landscapes (tested in field/underwater environments). Backbone encoder is \textbf{Resnet18}, \textbf{latent code} was concaternated with control signals and decoder is \textbf{de-convolution network} (transposed convolution), average lost rate in underwater experiments decreased 91.5\%, average aligned trajectory RMSE is 6.39 with improvement of 51.8\%
-           (\href{ssh://git@gitlab.mcgillmobilerobotics.mooo.com:2289/travis/AutoDriving.git}{\textcolor{linkblue}{gitlab}})}
+          {A \textbf{synthesized hierarchical neural network} for autonomous navigation in complex environment and variant landscapes (tested in field/underwater environments). Backbone \textbf{encoder} is \textbf{Resnet18}, \textbf{latent code} was concaternated with control signals and \textbf{decoder} is \textbf{de-convolution network} (transposed convolution)}
         \resumeItem{Deep RL Auto Driving (Sim2Real)}
-          {Re-implemented CAD2RL in python and extended to multiple policy gradient based backends \textbf{(A3C+LSTM, DDPG, TRPO, PPO, TD3)} in continuous action space, simulator is is \textbf{Microsoft AirSim} tested on RC car and UAV.
+          {Re-implemented CAD2RL in python and extended to multiple policy gradient based backends \textbf{(A3C+LSTM)} in continuous action space, simulator is \textbf{Microsoft AirSim}, tested on RC car and UAV.
           }
       \resumeItemListEnd
 
@@ -181,10 +180,10 @@ Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge
 
     \resumeSubheading
       {UCLA}{Los Angeles, USA}
-      {Part-time Research Assistant, Supervisor: \textbf{Yi Xing}}{Jul 2015 - Jan 2016}
+      {Research Assistant, Supervisor: \textbf{Yi Xing}}{Jul 2015 - Jan 2016}
       \resumeItemListStart
         \resumeItem{Code Parallelization}
-          {optimized their RNA analysis tool, [stable release (rMATS 3.0.9)], binding the large matrix calculations with C11 (SSE/AVX vectorization, Intel) and CUDA (cuBLAS , Nvidia) }
+          {optimized their RNA analysis tool, [stable release (\href{http://rnaseq-mats.sourceforge.net/rmats3.0.9/}{\textcolor{linkblue}{rMATS 3.0.9}})], binding the large matrix calculations with C11 (SSE/AVX vectorization, Intel) and CUDA (cuBLAS , Nvidia) }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -193,32 +192,24 @@ Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge
 \shorterSection{\textcolor{titleblue}{Projects}}
   \resumeSubHeadingListStart
     \resumeSubItem{Visual SLAM}
-     {Refactored \textbf{Stereo-DSO} ( \href{http://gitlab.mcgillmobilerobotics.mooo.com:8089/cheng/stereo_DSO_ros}{\textcolor{linkblue}{gitlab}}) with keyframe and feature point based \textbf{loop closure, BA} (\textbf{Ceres} solver). Using Tracking-Mapping-ReTracking three thread architecture, run on Nvidia-TX2 with ~15 FPS. Comprehensively \textbf{re-implemented} \href{https://github.com/rancheng/dso_understands}{\textcolor{linkblue}{DSO}} and annotated with exhaustive explains.
+     {
+     Comprehensively \textbf{re-implemented} \href{https://github.com/rancheng/dso_understands}{\textcolor{linkblue}{DSO}} and annotated with exhaustive explains.
      }
     \resumeSubItem{Deep Monocular Dense 3D Reconstruction}{Dense 3D reconstruction with \textbf{monodepth2} initialized Visual Odometry, leveraging traditional photometric consistancy, occlusion discrepancy, and local geometrical-smooth assumptions to \textbf{optimize depth estimation} (\textbf{LM} method) and \textbf{register} 3D map point clouds.}
     \resumeSubItem{Abstraction Augmented Deep RL}
       {Abstract rgb image with Unet shaped network to digest image in latent representation, and learn from latent inputs, average convergence time increased 27.3\%, maximum reward (10M iterations) is 1.21 times than baseline model without abstraction augmentation, experiments conducted under self-collected dataset from AirSim simulator (\href{https://github.com/rancheng/AirSimProjects}{\textcolor{linkblue}{github}})}
     \resumeSubItem{Forgetting Model for BP}
-      {Introduced forgetting model for back propagation as in gradient dynamic routine, inspired from forgetting curve, I invented forgetting factor to regulate delta weights updates, (\href{https://rancheng.github.io/forgetting-model/}{\textcolor{linkblue}{math proof}})}
-    \resumeSubItem{LOAM}{extended LOAM with co-visibility check, optimized with Ceres optimizer and asynchronous threading}
+      {Introduced forgetting model for back propagation as in gradient dynamic routine, inspired from forgetting curve, I invented forgetting factor to regulate delta weights updates (\href{https://rancheng.github.io/forgetting-model/}{\textcolor{linkblue}{math proof}})}
+    \resumeSubItem{LOAM}{extended LOAM (LiDAR Odometry and Mapping) with co-visibility check, optimized with Ceres optimizer and asynchronous threading}
   \resumeSubHeadingListEnd
 
 %-----------Addtional Experience & Achievements-----------------
 \shorterSection{\textcolor{titleblue}{Publications}}
   \resumeSubHeadingListStart
   \small
-        
-        \item{Deep Monocular Visual Odometry with Direct Method, \textbf{R. Cheng}, D. Meger, G. Dudek \textbf{CVPR 2020} \href{https://rancheng.github.io/deep-schur-complement/}{\textcolor{linkblue}{preprint}}}
+        \item{Navigation in the Service of Enhanced Pose Estimation, Travis Manderson, \textbf{Ran Cheng}, David Meger and Gregory Dudek, \textbf{ISER 2018}, \href{http://www.cim.mcgill.ca/~travism/authors/ran-cheng/}{\textcolor{linkblue}{paper}}}
         \vspace{-5pt}
-        \item{Robust Off-road Robotics Visual Navigation with Back-Projection Learning, \textbf{R. Cheng}, G. Dudek, D.Meger, \textbf{ICRA 2020}, \href{https://github.com/rancheng/rancheng.github.io/raw/master/docs/icra2019_auto_driving.pdf}{\textcolor{linkblue}{preprint}}}
-        \vspace{-5pt}
-        
-        \item{Abstraction Augmentation for Deep Reinforcement Learning, \textbf{R. Cheng}, G. Dudek, D. Meger \textbf{CoRL 2019}, \href{https://github.com/rancheng/rancheng.github.io/raw/master/docs/CoRL2019(1).pdf}{\textcolor{linkblue}{paper}}}
-        \vspace{-5pt}
-        % \item{Predicting Visual Pose Estimation Failure on a Vehicle for Off-Road Driving, T. Manderson, \textbf{R. Cheng}, G. Dudek \textbf{ICRA 2019}}
-        \item{Navigation in the Service of Enhanced Pose Estimation, Travis Manderson, \textbf{Ran Cheng}, David Meger and Gregory Dudek, \textbf{ISER 2018}, \href{https://github.com/rancheng/rancheng.github.io/raw/master/docs/iser2018_aqua_path_learning.pdf}{\textcolor{linkblue}{paper}}}
-        \vspace{-5pt}
-        \item{Vision-Based Autonomous Underwater Swimming in Dense Coral for Combined Collision Avoidance and Target Selection, T. Manderson, \textbf{R. Cheng}, D. Meger, G. Dudek, \textbf{IROS 2018}, \href{https://github.com/rancheng/rancheng.github.io/raw/master/docs/iros2018_aqua_path_learning.pdf}{\textcolor{linkblue}{paper}}}
+        \item{Vision-Based Autonomous Underwater Swimming in Dense Coral for Combined Collision Avoidance and Target Selection, T. Manderson, \textbf{R. Cheng}, D. Meger, G. Dudek, \textbf{IROS 2018}, \href{http://www.cim.mcgill.ca/~travism/authors/ran-cheng/}{\textcolor{linkblue}{paper}}}
   \resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
